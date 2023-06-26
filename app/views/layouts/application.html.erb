@@ -8,9 +8,27 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   </head>
 
   <body>
-    <%= yield %>
+    <main class="container">
+      <nav>
+        <ul>
+          <li>
+            <%= link_to "Inicio", root_path %>
+          </li>
+          <li>
+            <%= link_to "Equipo", team_path %>
+          </li>
+          <li>
+            <%= link_to "Legales", terms_path %>
+          </li>
+        </ul>
+      </nav>
+      
+      <%= yield %>
+    </main>
+    
   </body>
 </html>
